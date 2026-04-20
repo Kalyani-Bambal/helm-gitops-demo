@@ -1,0 +1,9 @@
+replicaCount: 4
+
+image:
+  repository: kalyanibambal97/myapp
+  tag: latest
+
+service:
+  type: NodePort
+  port: 80
