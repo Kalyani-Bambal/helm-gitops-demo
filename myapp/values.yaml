@@ -9,6 +9,7 @@ image:
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
+
 nameOverride: ""
 fullnameOverride: ""
 
@@ -39,7 +40,7 @@ service:
 
 ingress:
   enabled: false
-  className: "nginx"
+  className: nginx
   annotations: {}
   hosts:
     - host: api.example.com
@@ -83,3 +84,7 @@ readinessProbe:
     port: 5000
   initialDelaySeconds: 5
   periodSeconds: 5
+
+# HTTPRoute configuration
+httpRoute:
+  enabled: false
